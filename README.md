@@ -1,1 +1,2 @@
 # petid-backend
+PHP & PhpMyAdmin
