@@ -11,10 +11,10 @@ if ($conn->connect_error) {
 }
 
 $data = json_decode(file_get_contents("php://input"), true);
-$location = $data['location']; // Buradan gelen konum bilgisi
-$petId = $data['pet_id']; // Buradan gelen petId
+$location = $data['location'];
+$petId = $data['pet_id'];
 
-// Şimdi bu konum bilgisini veritabanına kaydedebilirsiniz, örneğin:
+// konum bilgisini veritabanına kaydetme
 $sql = "UPDATE pets SET konum = '$location' WHERE id = '$petId'";
 
 if ($conn->query($sql) === TRUE) {
