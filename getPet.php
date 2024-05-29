@@ -1,5 +1,5 @@
 <?php
-// İstekler arasındaki CORS hatalarını önlemek için CORS başlıklarını ayarlayın
+// İstekler arasındaki CORS hatalarını önlemek için
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
@@ -14,10 +14,10 @@ if ($conn->connect_error) {
     die("Bağlantı hatası: " . $conn->connect_error);
 }
 
-// URL'den gelen id'yi al
+// URL'den gelen id
 $id = $_GET['id'];
 
-// Veritabanında ilgili id ile bir sorgu yapın
+// Veritabanında ilgili id ile sorgu
 $sql = "SELECT * FROM pets WHERE petid = '$id'";
 $result = $conn->query($sql);
 
